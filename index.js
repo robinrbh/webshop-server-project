@@ -1,18 +1,12 @@
 const express = require("express")
-
 const app = express()
 const jsonParser = express.json();
 
 app.use(jsonParser);
 
-// const userRouter = require("./router/user");
-// const imageRouter = require("./router/image");
-// const loginRouter = require("./router/auth");
-// const authMiddleware  = require("./auth/middleware")
+const productRouter = require("./routers/product");
 
-// app.use("/users", userRouter)
-// app.use("/images", imageRouter)
-// app.use(loginRouter)
+app.use("/products", productRouter)
 
 const port = process.env.PORT || 4000
 
