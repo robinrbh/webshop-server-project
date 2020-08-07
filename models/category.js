@@ -8,14 +8,19 @@ module.exports = (sequelize, DataTypes) => {
 		 * The `models/index` file will call this method automatically.
 		 */
 		static associate(models) {
-			// define association here
+      // define association here
+      category.belongsToMany(models.products, {
+        through: "productCategory", 
+        foreignKey: "categoryId", 
+			})
 		}
 	}
 	category.init(
 		{
+			id: { type: DataTypes.INTEGER, allowNull: false, unique: true },
 			name: { type: DataTypes.STRING, allowNull: false, unique: true },
-			imageurl: { type: DataTypes.STRING, allowNull: false, unique: true },
-			description: { type: DataTypes.STRING, allowNull: false },
+			imageurl: { type: DataTypes.TEXT, allowNull: false, unique: true },
+			description: { type: DataTypes.TEXT, allowNull: false },
 		},
 		{
 			sequelize,
