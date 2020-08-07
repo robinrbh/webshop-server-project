@@ -15,7 +15,7 @@ module.exports = {
 			},
 			description: { type: Sequelize.TEXT, allowNull: false },
 			price: { type: Sequelize.FLOAT, allowNull: false },
-			imageurl: { type: Sequelize.TEXT, allowNull: false, unique: true },
+			imageurl: { type: Sequelize.TEXT, allowNull: false, unique: false },
 			createdAt: {
 				allowNull: false,
 				type: Sequelize.DATE,

@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
 			name: { type: DataTypes.STRING, allowNull: false, unique: true },
 			description: { type: DataTypes.TEXT, allowNull: false },
 			price: { type: DataTypes.FLOAT, allowNull: false },
-			imageurl: { type: DataTypes.TEXT, allowNull: false, unique: true },
+			imageurl: { type: DataTypes.TEXT, allowNull: false, unique: false },
 		},
 		{
 			sequelize,
