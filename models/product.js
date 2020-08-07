@@ -10,19 +10,19 @@ module.exports = (sequelize, DataTypes) => {
 		static associate(models) {
 			// define association here
 			//product.belongsTo(models.todoList);
-      product.belongsToMany(models.order, {
-        through: "orderProducts", 
-        foreignKey: "productId", 
+			product.belongsToMany(models.order, {
+				through: "orderProducts",
+				foreignKey: "productId",
 			}),
-			product.belongsToMany(models.category, {
-        through: "productCategory", 
-        foreignKey: "productId", 
-			})
+				product.belongsToMany(models.category, {
+					through: "productCategory",
+					foreignKey: "productId",
+				})
 		}
 	}
 	product.init(
 		{
-      id: { type: DataTypes.INTEGER, allowNull: false, unique: true },
+			id: { type: DataTypes.INTEGER, allowNull: false, unique: true },
 			name: { type: DataTypes.STRING, allowNull: false, unique: true },
 			description: { type: DataTypes.TEXT, allowNull: false },
 			price: { type: DataTypes.FLOAT, allowNull: false },

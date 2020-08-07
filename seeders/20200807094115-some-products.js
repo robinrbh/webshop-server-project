@@ -45,7 +45,7 @@ module.exports = {
 				},
 				{
 					id: 5,
-          name: "Nokia 3310",
+					name: "Nokia 3310",
 					description: "Baksteen",
 					price: "100",
 					imageurl:

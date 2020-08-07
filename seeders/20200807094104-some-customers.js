@@ -6,7 +6,8 @@ module.exports = {
 			"customers",
 			[
 				{
-					name: "Tom Vos",
+					firstName: "Tom",
+					lastName: "Vos",
 					email: "tom@tom.nl",
 					phone: 1234567,
 					password: "tom",
@@ -14,17 +15,19 @@ module.exports = {
 					updatedAt: new Date(),
 				},
 				{
-					name: "Weilong Lin",
+					firstName: "Weilong",
+					lastName: "Lin",
 					email: "weilong@weilong.nl",
-					phone: 1234567,
+					phone: 12345678,
 					password: "weilong",
 					createdAt: new Date(),
 					updatedAt: new Date(),
-        },
-        {
-					name: "Robin Hartog",
+				},
+				{
+					firstName: "Robin",
+					lastName: "Hartog",
 					email: "robin@robin.nl",
-					phone: 1234567,
+					phone: 12345679,
 					password: "robin",
 					createdAt: new Date(),
 					updatedAt: new Date(),
@@ -35,6 +38,6 @@ module.exports = {
 	},
 
 	down: async (queryInterface, Sequelize) => {
-		return await queryInterface.bulkDelete("customers", null, {});
+		return await queryInterface.bulkDelete("customers", null, {})
 	},
 }

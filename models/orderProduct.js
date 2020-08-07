@@ -8,14 +8,14 @@ module.exports = (sequelize, DataTypes) => {
 		 * The `models/index` file will call this method automatically.
 		 */
 		static associate(models) {
-			orderProduct.belongsTo(models.product);
-      orderProduct.belongsTo(models.todoItem);
+			orderProduct.belongsTo(models.product)
+			orderProduct.belongsTo(models.order)
 		}
 	}
 	orderProduct.init(
 		{
-			productId: { type: DataTypes.INTEGER, allowNull: false},
-			orderId: { type: DataTypes.INTEGER, allowNull: false},
+			productId: { type: DataTypes.INTEGER, allowNull: false },
+			orderId: { type: DataTypes.INTEGER, allowNull: false },
 			// productName: { type: DataTypes.STRING, allowNull: false, unique: true },
 			// amount: { type: DataTypes.STRING, allowNull: false },
 			// price: { type: DataTypes.FLOAT, allowNull: false },
